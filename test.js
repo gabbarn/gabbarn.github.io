@@ -10,5 +10,7 @@ renderer.domElement.style.left = '0px';
 document.body.appendChild( renderer.domElement );
 
 const scene = new THREE.Scene();
+const camera = new THREE.Camera();
 
+scene.add(camera);
 
