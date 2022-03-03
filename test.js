@@ -14,3 +14,7 @@ const camera = new THREE.Camera();
 
 scene.add(camera);
 
+var ArToolkitSource = new THREEx.ArToolkitSource({
+    sourceType: "webcam"
+});
+ArToolkitSource.init();
