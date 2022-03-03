@@ -14,6 +14,11 @@
       embedded
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
+    <a-text
+      value="This content will always face you."
+      look-at="[gps-camera]"
+      scale="120 120 120"
+      gps-entity-place="latitude: 64.749508; longitude: 20.959944;"></a-text>
       <a-camera gps-camera rotation-reader></a-camera>
       <a-box color="tomato" depth="10" height="10" width="10" gps-entity-place="latitude: 64.749508; longitude: 20.959944"></a-box>
     </a-scene>
