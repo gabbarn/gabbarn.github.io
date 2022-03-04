@@ -3,6 +3,10 @@ window.onload = () => {
     renderPlaces(places);
 };
 
+function instantiateCamera(){
+    
+}
+
 function staticLoadPlaces() {
    return [
        {
