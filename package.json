@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "three": "^0.138.2"
+    "three": "^0.138.2",
+    "threex": "^1.0.0"
   }
 }
