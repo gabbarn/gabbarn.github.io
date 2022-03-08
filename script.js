@@ -13,6 +13,7 @@ function instantiateCamera(event){
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
+    console.log(alpha + beta);
     document.querySelector("#div1").innerHTML = alpha;
 }
 
