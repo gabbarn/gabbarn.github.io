@@ -13,7 +13,7 @@ function instantiateCamera(event){
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
-    document.querySelector("#div1").innerHTML = absolute;
+    document.querySelector("#div1").innerHTML = alpha;
 }
 
 function staticLoadPlaces() {
