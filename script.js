@@ -3,13 +3,13 @@ window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
-     if(window.DeviceOrientationEvent){
-         window.addEventListener("deviceorientation", instantiateCamera, true)
-       }else{
-         console.log("DeviceOrientationEvent is not supported");
-         document.querySelector("#div1").innerHTML = "0";
-       }
-    window.addEventListener("mousemove", () => { count++; console.log(count); })
+    //  if(window.DeviceOrientationEvent){
+    //      window.addEventListener("deviceorientation", instantiateCamera, true)
+    //    }else{
+    //      console.log("DeviceOrientationEvent is not supported");
+    //      document.querySelector("#div1").innerHTML = "0";
+    //    }
+    // window.addEventListener("mousemove", () => { count++; console.log(count); })
 };
 
 function instantiateCamera(event){
