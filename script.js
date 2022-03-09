@@ -5,7 +5,7 @@ window.onload = () => {
         window.addEventListener("deviceorientation", instantiateCamera, true)
       }else{
         console.log("DeviceOrientationEvent is not supported");
-        document.querySelector("#div1").innerHTML = 0;
+        document.querySelector("#div1").innerHTML = "0";
       }
 };
 
