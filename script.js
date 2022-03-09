@@ -2,22 +2,23 @@ window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
-    if(window.DeviceOrientationEvent){
-        window.addEventListener("deviceorientation", instantiateCamera, true)
-      }else{
-        console.log("DeviceOrientationEvent is not supported");
-        document.querySelector("#div1").innerHTML = "0";
-      }
+     if(window.DeviceOrientationEvent){
+         window.addEventListener("deviceorientation", instantiateCamera, true)
+       }else{
+         console.log("DeviceOrientationEvent is not supported");
+         document.querySelector("#div1").innerHTML = "0";
+       }
     
 };
-
+var count;
 function instantiateCamera(event){
+    count++;
     var absolute = event.absolute;
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
     console.log(alpha);
-    document.querySelector("#div1").innerHTML = alpha;
+    document.querySelector("#div1").innerHTML = count;
 }
 
 function staticLoadPlaces() {
