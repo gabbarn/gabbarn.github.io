@@ -1,4 +1,5 @@
 window.onload = () => {
+    console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
     if(window.DeviceOrientationEvent){
@@ -7,7 +8,7 @@ window.onload = () => {
         console.log("DeviceOrientationEvent is not supported");
         document.querySelector("#div1").innerHTML = "0";
       }
-    console.log("this happens");
+    
 };
 
 function instantiateCamera(event){
