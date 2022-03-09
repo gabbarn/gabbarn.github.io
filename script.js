@@ -1,3 +1,4 @@
+var count = 1;
 window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
@@ -8,9 +9,9 @@ window.onload = () => {
          console.log("DeviceOrientationEvent is not supported");
          document.querySelector("#div1").innerHTML = "0";
        }
-    
+    window.addEventListener("mousemove", () => { count++; console.log(count); })
 };
-var count = 1;
+
 function instantiateCamera(event){
     count++;
     var absolute = event.absolute;
