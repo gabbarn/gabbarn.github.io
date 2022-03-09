@@ -10,7 +10,7 @@ window.onload = () => {
        }
     
 };
-var count;
+var count = 1;
 function instantiateCamera(event){
     count++;
     var absolute = event.absolute;
