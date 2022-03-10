@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import * as THREE from '/three'
 var count = 1;
 window.onload = () => {
     console.log("this happens");
