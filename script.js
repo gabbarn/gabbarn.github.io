@@ -6,7 +6,6 @@ window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
-
 function instantiateCamera(event){
     var absolute = event.absolute;
     var alpha = event.alpha;
@@ -14,7 +13,6 @@ function instantiateCamera(event){
     var gamma = event.gamma;
     console.log(alpha);
 }
-
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
    return [
