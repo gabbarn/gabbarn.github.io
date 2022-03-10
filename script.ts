@@ -1,21 +1,18 @@
-//import * as ARJS from '@ar-js-org/ar.js/aframe';
-const arjs = require('@ar-js-org/ar.js/aframe');
+import * as THREE from 'three'
+import * as ARJS from '@ar-js-org/ar.js'
 var count = 1;
 window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
-    console.log(navigator.geolocation.getCurrentPosition()); 
 };
 
 function instantiateCamera(event){
-    count++;
     var absolute = event.absolute;
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
     console.log(alpha);
-    document.querySelector("#div1").innerHTML = count;
 }
 
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
@@ -51,7 +48,6 @@ function staticLoadPlaces() {
         },
    ];
 }
-
 function renderPlaces(places) {
    let scene = document.querySelector('a-scene');
 
