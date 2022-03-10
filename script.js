@@ -3,13 +3,7 @@ window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
-    //  if(window.DeviceOrientationEvent){
-    //      window.addEventListener("deviceorientation", instantiateCamera, true)
-    //    }else{
-    //      console.log("DeviceOrientationEvent is not supported");
-    //      document.querySelector("#div1").innerHTML = "0";
-    //    }
-    // window.addEventListener("mousemove", () => { count++; console.log(count); })
+    console.log(navigator.geolocation.getCurrentPosition()); 
 };
 
 function instantiateCamera(event){
@@ -22,6 +16,7 @@ function instantiateCamera(event){
     document.querySelector("#div1").innerHTML = count;
 }
 
+//     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
    return [
        {
