@@ -1,4 +1,5 @@
-import '@ar-js-org/ar.js/aframe/aframe-ar-nft.js';
+import * as ARJS from '@ar-js-org/ar.js/aframe/aframe-ar-nft.js';
+ARJS = require('@ar-js-org/ar.js/aframe/aframe-ar-nft.js');
 
 var count = 1;
 window.onload = () => {
