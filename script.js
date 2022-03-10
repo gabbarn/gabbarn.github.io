@@ -1,6 +1,5 @@
-import * as ARJS from '@ar-js-org/ar.js/aframe';
-ARJS = require('@ar-js-org/ar.js/aframe');
-
+//import * as ARJS from '@ar-js-org/ar.js/aframe';
+const arjs = require('@ar-js-org/ar.js/aframe');
 var count = 1;
 window.onload = () => {
     console.log("this happens");
