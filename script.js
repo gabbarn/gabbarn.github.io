@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-import * as ARJS from '@ar-js-org/ar.js'
 var count = 1;
 window.onload = () => {
     console.log("this happens");
