@@ -1,3 +1,5 @@
+import '@ar-js-org/ar.js/aframe/aframe-ar-nft.js';
+
 var count = 1;
 window.onload = () => {
     console.log("this happens");
