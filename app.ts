@@ -91,5 +91,7 @@ function renderPlanes(planes: Places[]){
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('look-at', '#camera');
         model.setAttribute('scale', '1 1 1');
+        if (scene != null)
+            scene.appendChild(model);
     })
 }
