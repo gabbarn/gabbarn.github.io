@@ -86,7 +86,10 @@ function renderPlanes(planes) {
         var model = document.createElement('a-plane');
         model.setAttribute('gps-entity-place', "latitude: ".concat(latitude, "; longitude: ").concat(longitude, ";"));
         model.setAttribute('look-at', '#camera');
-        model.setAttribute('scale', '10 10 10');
+        model.setAttribute('scale', "".concat(scale));
+        model.addEventListener('loaded', function () {
+            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
+        });
         if (scene != null)
             scene.appendChild(model);
     });
