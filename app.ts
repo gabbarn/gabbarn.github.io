@@ -9,10 +9,10 @@ type Places = {
 
 window.onload = () => {
     console.log("this happens");
-    let places = staticLoadPlaces();
+    //let places = staticLoadPlaces();
     let planes = staticLoadPlanes();
     renderPlanes(planes);
-    renderPlaces(places);
+    //renderPlaces(places);
 };
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {

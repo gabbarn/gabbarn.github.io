@@ -2,10 +2,10 @@
 exports.__esModule = true;
 window.onload = function () {
     console.log("this happens");
-    var places = staticLoadPlaces();
+    //let places = staticLoadPlaces();
     var planes = staticLoadPlanes();
     renderPlanes(planes);
-    renderPlaces(places);
+    //renderPlaces(places);
 };
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
