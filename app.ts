@@ -100,7 +100,7 @@ function renderPlanes(planes: Places[]){
         let model = document.createElement('a-plane');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('look-at', '#camera');
-        model.setAttribute('scale', '10 10 10');
+        model.setAttribute('scale', `${scale}`);
         if (scene != null)
             scene.appendChild(model);
     })
