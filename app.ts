@@ -4,6 +4,7 @@ type Places = {
     location: {
         lat: number;
         lng: number;
+        scl: string;
     };
 }
 
@@ -54,6 +55,7 @@ function staticLoadPlanes(){
             location: {
                 lat: 64.749492,
                 lng: 20.959880,
+                scl: '1 1 1'
             }
         },
         {
@@ -61,6 +63,7 @@ function staticLoadPlanes(){
             location: {
                 lat: 64.749428,
                 lng: 20.959106,
+                scl: '10 10 10'
             }
         }
     ]
@@ -93,7 +96,7 @@ function renderPlanes(planes: Places[]){
     planes.forEach((plane) => {
         let latitude = plane.location.lat;
         let longitude = plane.location.lng;
-
+        let scale = plane.location.scl;
         let model = document.createElement('a-plane');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('look-at', '#camera');

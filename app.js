@@ -45,7 +45,8 @@ function staticLoadPlanes() {
             name: 'plane01',
             location: {
                 lat: 64.749492,
-                lng: 20.959880
+                lng: 20.959880,
+                scl: '1 1 1'
             }
         },
         {
@@ -53,6 +54,7 @@ function staticLoadPlanes() {
             location: {
                 lat: 64.749428,
                 lng: 20.959106,
+                scl: '10 10 10'
             }
         }
     ];
@@ -80,10 +82,11 @@ function renderPlanes(planes) {
     planes.forEach(function (plane) {
         var latitude = plane.location.lat;
         var longitude = plane.location.lng;
+        var scale = plane.location.scl;
         var model = document.createElement('a-plane');
         model.setAttribute('gps-entity-place', "latitude: ".concat(latitude, "; longitude: ").concat(longitude, ";"));
         model.setAttribute('look-at', '#camera');
-        model.setAttribute('scale', '1 1 1');
+        model.setAttribute('scale', '10 10 10');
         if (scene != null)
             scene.appendChild(model);
     });
