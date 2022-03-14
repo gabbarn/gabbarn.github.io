@@ -10,9 +10,10 @@ type Places = {
 window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
+    let planes = staticLoadPlanes();
+    renderPlanes(planes);
     renderPlaces(places);
 };
-
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
    return [
@@ -46,6 +47,18 @@ function staticLoadPlaces() {
         },
    ];
 }
+function staticLoadPlanes(){
+    return [
+        {
+            name: 'plane01',
+            location: {
+                lat: 64.749492,
+                lng: 20.959880,
+            }
+        }
+    ]
+}
+
 function renderPlaces(places: Places[]){
     let scene = document.querySelector('a-scene');
     places.forEach((place) => {
@@ -65,4 +78,18 @@ function renderPlaces(places: Places[]){
        if(scene != null)
         scene.appendChild(model);
    });
+}
+
+function renderPlanes(planes: Places[]){
+    let scene = document.querySelector('a-scene');
+
+    planes.forEach((plane) => {
+        let latitude = plane.location.lat;
+        let longitude = plane.location.lng;
+
+        let model = document.createElement('a-plane');
+        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        model.setAttribute('look-at', '#camera');
+        model.setAttribute('scale', '1 1 1');
+    })
 }

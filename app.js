@@ -1,16 +1,12 @@
-var count = 1;
+"use strict";
+exports.__esModule = true;
 window.onload = function () {
     console.log("this happens");
     var places = staticLoadPlaces();
+    var planes = staticLoadPlanes();
+    renderPlanes(planes);
     renderPlaces(places);
 };
-function instantiateCamera(event) {
-    var absolute = event.absolute;
-    var alpha = event.alpha;
-    var beta = event.beta;
-    var gamma = event.gamma;
-    console.log(alpha);
-}
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
     return [
@@ -44,6 +40,17 @@ function staticLoadPlaces() {
         },
     ];
 }
+function staticLoadPlanes() {
+    return [
+        {
+            name: 'plane01',
+            location: {
+                lat: 64.749492,
+                lng: 20.959880
+            }
+        }
+    ];
+}
 function renderPlaces(places) {
     var scene = document.querySelector('a-scene');
     places.forEach(function (place) {
@@ -60,5 +67,16 @@ function renderPlaces(places) {
         });
         if (scene != null)
             scene.appendChild(model);
+    });
+}
+function renderPlanes(planes) {
+    var scene = document.querySelector('a-scene');
+    planes.forEach(function (plane) {
+        var latitude = plane.location.lat;
+        var longitude = plane.location.lng;
+        var model = document.createElement('a-plane');
+        model.setAttribute('gps-entity-place', "latitude: ".concat(latitude, "; longitude: ").concat(longitude, ";"));
+        model.setAttribute('look-at', '#camera');
+        model.setAttribute('scale', '1 1 1');
     });
 }
