@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 window.onload = function () {
     console.log("this happens");
     //let places = staticLoadPlaces();
