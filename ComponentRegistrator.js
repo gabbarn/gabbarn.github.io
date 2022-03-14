@@ -1,5 +1,3 @@
-
-
 AFRAME.registerComponent('box-thing', {
     schema: { // this is kinda like a constructor where u can put data into the component and the does stuff to the insides of the component
         width: {type: 'number', default: 1},

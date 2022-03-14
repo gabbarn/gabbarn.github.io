@@ -1,4 +1,11 @@
 var count = 1;
+type Places = {
+    name: string;
+    location: {
+        lat: number;
+        lng: number;
+    };}
+
 window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
@@ -44,7 +51,7 @@ function staticLoadPlaces() {
         },
    ];
 }
-function renderPlaces(places) {
+function renderPlaces(places: Places[]){
    let scene = document.querySelector('a-scene');
 
    places.forEach((place) => {
@@ -61,7 +68,7 @@ function renderPlaces(places) {
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
        });
-
-       scene.appendChild(model);
+       if(scene != null)
+        scene.appendChild(model);
    });
 }
