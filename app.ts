@@ -1,23 +1,18 @@
-var count = 1;
+import * as THREE from 'three';
 type Places = {
     name: string;
     location: {
         lat: number;
         lng: number;
-    };}
+    };
+}
 
 window.onload = () => {
     console.log("this happens");
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
-function instantiateCamera(event){
-    var absolute = event.absolute;
-    var alpha = event.alpha;
-    var beta = event.beta;
-    var gamma = event.gamma;
-    console.log(alpha);
-}
+
 //     https://www.latlong.net/      use the website to find latitude and longitude of a location  
 function staticLoadPlaces() {
    return [
@@ -52,9 +47,8 @@ function staticLoadPlaces() {
    ];
 }
 function renderPlaces(places: Places[]){
-   let scene = document.querySelector('a-scene');
-
-   places.forEach((place) => {
+    let scene = document.querySelector('a-scene');
+    places.forEach((place) => {
        let latitude = place.location.lat;
        let longitude = place.location.lng;
 

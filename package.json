@@ -1,9 +1,12 @@
 {
   "dependencies": {
-    "@ar-js-org/ar.js": "^3.4.0-alpha-rc1"
+    "@ar-js-org/ar.js": "^3.4.0-alpha-rc1",
+    "three": "^0.138.3"
   },
   "name": "gabbarn.github.io",
   "version": "1.0.0",
   "main": "ComponentRegistrator.js",
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/three": "^0.138.0"
+  }
 }
