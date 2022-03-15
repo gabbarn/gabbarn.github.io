@@ -15,7 +15,7 @@ AFRAME.registerComponent('direct-towards-latlng', {
         let direction = this.data.object3D.position.sub(this.el.object3D.position);
     }
 });
-AFRAME.registerComponent('disable-GPS-afterawhile', {
+AFRAME.registerComponent('disable-gps-afterawhile', {
     schema: { TimeOutTime: { type: 'int', default: 10 } },
     init: function () {
         console.log("Inits");
