@@ -16,21 +16,22 @@ AFRAME.registerComponent('direct-towards-latlng',{
     let direction = this.data.object3D.position.sub(this.el.object3D.position);
   }
 });
-AFRAME.registerComponent('disable-GPS-afterawhile', {
+AFRAME.registerComponent('disable-gps-afterawhile', {
   schema: { TimeOutTime: {type: 'int', default:10} },
     init: function () {
       var date = new Date();
       var targetTime = new Date(date.getTime() + this.data.TimeOutTime*1000);
-      var totalTimeRemaining;
-      
-      console.log(this.el.getAttribute('date'));
+      this.el.setAttribute('targetTime', targetTime.getTime())
+      console.log(this.el.getAttribute('targetTime'));
      },
     tick: function (time, timeDelta) {
+      console.log(this.TimeLeft());
     },
     TimeLeft: function(){
         let currentDate = new Date();
         var currentTime = currentDate.getTime();
-        //let timeRemaining = parseInt(targetTime.getTime());
-        //this.totalTimeRemaining = timeRemaining * 1000;
+        let timeRemaining = (parseInt(this.el.getAttribute('targetTime')) - currentDate.getTime()) / 1000;
+        let totalTimeRemaining = timeRemaining * 1000;
+        return totalTimeRemaining;
     },
 });
