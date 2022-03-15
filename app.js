@@ -64,6 +64,14 @@ function staticLoadPlanes() {
                 lng: 20.957143,
                 scl: '100 100 100'
             }
+        },
+        {
+            name: 'plane04',
+            location: {
+                lat: 64.749655,
+                lng: 20.952742,
+                scl: '100 100 100'
+            }
         }
     ];
 }
