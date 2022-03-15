@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@ar-js-org/ar.js": "^3.4.0-alpha-rc1",
+    "@types/aframe": "^1.2.0",
     "three": "^0.138.3"
   },
   "name": "gabbarn.github.io",
