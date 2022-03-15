@@ -88,7 +88,6 @@ function renderPlaces(places: Places[]){
        model.setAttribute('rotation', '0 180 0');
        model.setAttribute('animation-mixer', '');
        model.setAttribute('scale', '0.5 0.5 0.5');
-
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
        });
@@ -108,7 +107,7 @@ function renderPlanes(planes: Places[]){
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('look-at', '#camera');
         model.setAttribute('scale', `${scale}`);
-        model.setAttribute('material', '');
+        model.setAttribute('material', 'alphaTest: 0');
         model.setAttribute('src', '#planeImage');
         model.addEventListener('loaded', () => {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
