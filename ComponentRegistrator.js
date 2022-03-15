@@ -25,6 +25,10 @@ AFRAME.registerComponent('disable-gps-afterawhile', {
     },
     tick: function (time, timeDelta) {
         console.log(this.TimeLeft());
+        if (this.TimeLeft() < 0) {
+            this.el.removeAttribute('gps-camera');
+            this.el.removeAttribute('disable-gps-afterawhile');
+        }
     },
     TimeLeft: function () {
         let currentDate = new Date();
