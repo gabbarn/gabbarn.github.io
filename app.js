@@ -87,6 +87,7 @@ function renderPlanes(planes) {
         model.setAttribute('gps-entity-place', "latitude: ".concat(latitude, "; longitude: ").concat(longitude, ";"));
         model.setAttribute('look-at', '#camera');
         model.setAttribute('scale', "".concat(scale));
+        model.setAttribute('material', 'shader: ocean; color: blue;');
         model.addEventListener('loaded', function () {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
         });
