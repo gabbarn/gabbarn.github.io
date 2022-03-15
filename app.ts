@@ -107,7 +107,7 @@ function renderPlanes(planes: Places[]){
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         model.setAttribute('look-at', '#camera');
         model.setAttribute('scale', `${scale}`);
-        model.setAttribute('material', 'alphaTest: 0');
+        model.setAttribute('material', 'alphaTest: 0.5');
         model.setAttribute('src', '#planeImage');
         model.addEventListener('loaded', () => {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
