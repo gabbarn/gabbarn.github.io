@@ -18,6 +18,7 @@ AFRAME.registerComponent('direct-towards-latlng', {
 AFRAME.registerComponent('disable-GPS-afterawhile', {
     schema: { TimeOutTime: { type: 'int', default: 10 } },
     init: function () {
+        console.log("Inits");
         var date = new Date();
         var targetTime = new Date(date.getTime() + this.data.TimeOutTime * 1000);
         var totalTimeRemaining;
