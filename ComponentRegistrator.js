@@ -16,8 +16,19 @@ AFRAME.registerComponent('direct-towards-latlng', {
     }
 });
 AFRAME.registerComponent('disable-GPS-afterawhile', {
-    init: function () { },
+    schema: { TimeOutTime: { type: 'int', default: 10 } },
+    init: function () {
+        var date = new Date();
+        var targetTime = new Date(date.getTime() + this.data.TimeOutTime * 1000);
+        var totalTimeRemaining;
+        console.log(this.el.getAttribute('date'));
+    },
     tick: function (time, timeDelta) {
-        console.log(time);
-    }
+    },
+    TimeLeft: function () {
+        let currentDate = new Date();
+        var currentTime = currentDate.getTime();
+        //let timeRemaining = parseInt(targetTime.getTime());
+        //this.totalTimeRemaining = timeRemaining * 1000;
+    },
 });
