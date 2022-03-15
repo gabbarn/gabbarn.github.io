@@ -16,3 +16,9 @@ AFRAME.registerComponent('direct-towards-latlng',{
     let direction = this.data.object3D.position.sub(this.el.object3D.position);
   }
 });
+AFRAME.registerComponent('disable-GPS-afterawhile',{
+    init: function () {},
+    tick: function (time, timeDelta) {
+      console.log(time);
+    }
+});
